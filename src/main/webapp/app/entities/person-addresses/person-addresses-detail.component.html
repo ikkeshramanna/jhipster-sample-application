@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="personAddresses">
+            <h2><span jhiTranslate="jhipsterSampleApplicationApp.personAddresses.detail.title">Person Addresses</span> {{ personAddresses.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.personAddresses.address">Address</span></dt>
+                <dd>
+                    <span>{{ personAddresses.address }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.personAddresses.zipcode">Zipcode</span></dt>
+                <dd>
+                    <span>{{ personAddresses.zipcode }}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterSampleApplicationApp.personAddresses.person">Person</span></dt>
+                <dd>
+                    <div *ngIf="personAddresses.person">
+                        <a [routerLink]="['/person', personAddresses.person?.id, 'view']">{{ personAddresses.person?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/person-addresses', personAddresses.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

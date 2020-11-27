@@ -1,0 +1,24 @@
+{
+  "jhipsterSampleApplicationApp": {
+    "personAddresses": {
+      "home": {
+        "title": "Person Addresses",
+        "createLabel": "Create a new Person Addresses",
+        "createOrEditLabel": "Create or edit a Person Addresses",
+        "notFound": "No Person Addresses found"
+      },
+      "created": "A new Person Addresses is created with identifier {{ param }}",
+      "updated": "A Person Addresses is updated with identifier {{ param }}",
+      "deleted": "A Person Addresses is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Person Addresses {{ id }}?"
+      },
+      "detail": {
+        "title": "Person Addresses"
+      },
+      "address": "Address",
+      "zipcode": "Zipcode",
+      "person": "Person"
+    }
+  }
+}
