@@ -1,0 +1,14 @@
+
+entity Person {
+	name String required,
+    age Integer
+}
+
+entity PersonAddresses {
+	address String required,
+    zipcode Integer
+}
+
+relationship OneToMany {
+	Person{addresses} to PersonAddresses
+}
