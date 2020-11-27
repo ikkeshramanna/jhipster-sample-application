@@ -13,6 +13,10 @@ import { RouterModule } from '@angular/router';
         loadChildren: () =>
           import('./person-addresses/person-addresses.module').then(m => m.JhipsterSampleApplicationPersonAddressesModule),
       },
+      {
+        path: 'person-details',
+        loadChildren: () => import('./person-details/person-details.module').then(m => m.JhipsterSampleApplicationPersonDetailsModule),
+      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],

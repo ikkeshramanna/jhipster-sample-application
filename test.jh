@@ -9,6 +9,15 @@ entity PersonAddresses {
     zipcode Integer
 }
 
+entity PersonDetails {
+    nid String required,
+    dob String required
+}
+
 relationship OneToMany {
 	Person{addresses} to PersonAddresses
+}
+
+relationship ManyToOne {
+	PersonDetails to Person{details}
 }

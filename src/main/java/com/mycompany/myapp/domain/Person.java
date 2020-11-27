@@ -31,6 +31,9 @@ public class Person implements Serializable {
     @OneToMany(mappedBy = "person")
     private Set<PersonAddresses> addresses = new HashSet<>();
 
+    @OneToMany(mappedBy = "person")
+    private Set<PersonDetails> details = new HashSet<>();
+
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
         return id;
@@ -89,6 +92,31 @@ public class Person implements Serializable {
 
     public void setAddresses(Set<PersonAddresses> personAddresses) {
         this.addresses = personAddresses;
+    }
+
+    public Set<PersonDetails> getDetails() {
+        return details;
+    }
+
+    public Person details(Set<PersonDetails> personDetails) {
+        this.details = personDetails;
+        return this;
+    }
+
+    public Person addDetails(PersonDetails personDetails) {
+        this.details.add(personDetails);
+        personDetails.setPerson(this);
+        return this;
+    }
+
+    public Person removeDetails(PersonDetails personDetails) {
+        this.details.remove(personDetails);
+        personDetails.setPerson(null);
+        return this;
+    }
+
+    public void setDetails(Set<PersonDetails> personDetails) {
+        this.details = personDetails;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
