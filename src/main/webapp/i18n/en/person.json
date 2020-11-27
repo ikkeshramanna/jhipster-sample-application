@@ -18,7 +18,8 @@
       },
       "name": "Name",
       "age": "Age",
-      "addresses": "Addresses"
+      "addresses": "Addresses",
+      "details": "Details"
     }
   }
 }

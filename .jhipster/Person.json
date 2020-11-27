@@ -19,6 +19,12 @@
       "otherEntityName": "personAddresses",
       "otherEntityRelationshipName": "person",
       "relationshipName": "addresses"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "personDetails",
+      "otherEntityRelationshipName": "person",
+      "relationshipName": "details"
     }
   ],
   "changelogDate": "20201127111049",
